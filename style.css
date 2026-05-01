@@ -255,17 +255,39 @@ main {
 }
 
 .schema-branches li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.schema-branches li:last-child {
+  border-bottom: none;
+}
+
+.schema-branches a {
   display: flex;
   align-items: center;
   gap: 0.7rem;
   padding: 0.65rem 0.9rem;
   font-size: 0.92rem;
   font-weight: 500;
-  border-bottom: 1px solid var(--rule);
+  color: inherit;
+  transition: background 160ms ease, color 160ms ease;
 }
 
-.schema-branches li:last-child {
-  border-bottom: none;
+.schema-branches a:hover {
+  background: var(--bg-soft);
+  color: var(--fg);
+}
+
+.schema-arrow-link {
+  margin-left: auto;
+  color: var(--muted-soft);
+  font-size: 0.95rem;
+  transition: transform 200ms ease, color 160ms ease;
+}
+
+.schema-branches a:hover .schema-arrow-link {
+  transform: translateX(3px);
+  color: var(--fg);
 }
 
 .schema-num {
